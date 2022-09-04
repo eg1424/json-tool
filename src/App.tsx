@@ -8,9 +8,9 @@ function App() {
     <div>
       <header>
       </header>
-      <body>
+      <div>
         <MainPage/>
-      </body>
+      </div>
     </div>
   );
 }
