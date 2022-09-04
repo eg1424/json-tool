@@ -14,8 +14,6 @@ const MainPage = ()=>{
         errorLeft?:string,
         errorRight?:string
     }
-
-    const validJson = false;
     
     const [jsonForm,setJsonForm] = useState<JsonFormState>({inputLeft:"",inputRight:""});
 
