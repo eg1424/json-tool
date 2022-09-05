@@ -1,5 +1,6 @@
 import React, {ChangeEvent, useState} from 'react';
 import {Form, Container ,Row, Col, Button} from 'react-bootstrap';
+import ReactJson from 'react-json-view';
 
 
 const ReactJsonViewCompare = require('react-json-view-compare');
@@ -76,11 +77,19 @@ const MainPage = ()=>{
         </Row>
         }
         {jsonForm.outputLeft && jsonForm.outputRight &&
+
+        <React.Fragment>    
+        <Row>
+            <Col><ReactJson src={jsonForm.outputLeft} sortKeys={true}/></Col>
+            <Col><ReactJson src={jsonForm.outputRight} sortKeys={true}/></Col>
+        </Row>
         <Row>
             <Col>
-                <ReactJsonViewCompare oldData={ jsonForm.outputLeft} newData={jsonForm.outputRight} />
+                <Form.Label>Compare result</Form.Label>
+                <ReactJsonViewCompare oldData={ jsonForm.outputLeft} newData={jsonForm.outputRight}/>
             </Col>
         </Row>
+        </React.Fragment>
         }
         </Container>
       </Form>
