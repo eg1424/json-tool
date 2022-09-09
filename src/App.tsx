@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import MainPage from './pages/MainPage';
+import JsonCompare from './pages/JsonCompare';
+import MainMenu from './components/Menu';
 
 function App() {
   return (
@@ -9,7 +10,10 @@ function App() {
       <header>
       </header>
       <div>
-        <MainPage/>
+        <MainMenu/>
+      </div>
+      <div>
+        <JsonCompare/>
       </div>
     </div>
   );
